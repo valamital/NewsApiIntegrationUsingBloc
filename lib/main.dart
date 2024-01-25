@@ -1,8 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:news_api_integration_bloc_demo/presentation/bloc/news/news_bloc.dart';
 import 'package:news_api_integration_bloc_demo/presentation/pages/news_page.dart';
-import 'bloc/news_bloc.dart';
 import 'data/repository/news_repository.dart';
 
 void main() {
