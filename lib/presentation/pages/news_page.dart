@@ -1,11 +1,10 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
+import '../../core/utils/image_constants.dart';
 import '../bloc/news/news_bloc.dart';
 import '../bloc/news/news_event.dart';
 import '../bloc/news/news_state.dart';
-
 
 class NewsPage extends StatelessWidget {
   const NewsPage({Key? key}) : super(key: key);
@@ -39,6 +38,12 @@ class NewsPage extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          Image.asset(
+            ImageConstant.imageNews,
+            width: 100,
+            height: 100,
+          ),
+          const SizedBox(height: 10),
           const Text(
             'Welcome to the News App',
             style: TextStyle(

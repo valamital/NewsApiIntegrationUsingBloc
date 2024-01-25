@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:news_api_integration_bloc_demo/presentation/bloc/news/news_bloc.dart';
@@ -8,6 +7,7 @@ import 'data/repository/news_repository.dart';
 void main() {
   runApp(const MyApp());
 }
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -25,12 +25,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-
-
-
-
-
-
-
-

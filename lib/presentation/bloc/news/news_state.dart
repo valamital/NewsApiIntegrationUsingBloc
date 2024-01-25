@@ -1,5 +1,3 @@
-
-
 import '../../../data/models/news_model.dart';
 import '../../../main.dart';
 
