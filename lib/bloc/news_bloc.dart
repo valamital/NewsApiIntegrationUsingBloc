@@ -18,16 +18,5 @@ class NewsBloc extends Bloc<NewsEvent, NewsState> {
       }
     });
   }
-  @override
-  Stream<NewsState> mapEventToState(NewsEvent event) async* {
-    if (event is FetchNewsEvent) {
-      yield NewsLoading();
-      try {
-        final newsList = await newsRepository.fetchNews();
-        yield NewsLoaded(newsList: newsList);
-      } catch (e) {
-        yield NewsError();
-      }
-    }
-  }
+
 }
