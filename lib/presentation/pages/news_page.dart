@@ -1,9 +1,11 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../bloc/news_bloc.dart';
-import '../../bloc/news_event.dart';
-import '../../bloc/news_state.dart';
+
+import '../bloc/news/news_bloc.dart';
+import '../bloc/news/news_event.dart';
+import '../bloc/news/news_state.dart';
+
 
 class NewsPage extends StatelessWidget {
   const NewsPage({Key? key}) : super(key: key);
