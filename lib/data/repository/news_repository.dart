@@ -5,14 +5,18 @@ import 'package:http/http.dart' as http;
 
 class NewsRepository {
   Future<List<News>> fetchNews() async {
-    final response = await http.get(Uri.parse(ApiConstant().newsApiUrl));
+    try {
+      final response = await http.get(Uri.parse(ApiConstant().newsApiUrl));
 
-    if (response.statusCode == 200) {
-      final jsonBody = jsonDecode(response.body);
-      final articles = jsonBody['articles'] as List;
-      return articles.map((json) => News.fromJson(json)).toList();
-    } else {
-      throw Exception('Failed to fetch news');
+      if (response.statusCode == 200) {
+        final jsonBody = jsonDecode(response.body);
+        final articles = jsonBody['articles'] as List;
+        return articles.map((json) => News.fromJson(json)).toList();
+      } else {
+        throw Exception('Failed to fetch news. Status code: ${response.statusCode}');
+      }
+    } catch (e) {
+      throw Exception('Failed to fetch news: $e');
     }
   }
 }
